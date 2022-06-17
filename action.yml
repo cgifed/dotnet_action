@@ -8,6 +8,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - runs: dotnet ${{ inputs.command }}
+    - run: dotnet ${{ inputs.command }}
       shell: bash 
     
