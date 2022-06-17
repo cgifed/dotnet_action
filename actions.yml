@@ -1,0 +1,13 @@
+name: 'Dotnet build action'
+description: 'cutsom dotnet action using github'
+inputs: 
+  command:
+    description: 'follow the commands'
+    required: true
+    default: restore
+runs:
+  using: "composite"
+  steps:
+    - runs: dotnet ${{ inputs.command }}
+      shell: bash 
+    
